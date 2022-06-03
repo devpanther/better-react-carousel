@@ -1,6 +1,6 @@
 {
   "name": "better-react-carousel",
-  "version": "1.0.4",
+  "version": "1.0.9",
   "description": "React resposive carousel component w/ grid layout",
   "homepage": "https://react-grid-carousel.now.sh/",
   "keywords": [
@@ -22,11 +22,10 @@
     "type": "git"
   },
   "main": "dist/bundle.js",
-  "files": [
-    "src",
-    "@types/index.d.ts"
-  ],
-  "types": "./@types/index.d.ts",
+  "types": "@types/index.d.ts",
+  "browser": {
+    "./dist/bundle.js": "./dist/bundle.js"
+  },
   "scripts": {
     "dev": "npm run build && webpack-dev-server --config examples/webpack.config.js",
     "build": "rollup -c",
@@ -67,8 +66,8 @@
     "husky": "^4.0.10",
     "lint-staged": "^10.0.1",
     "prettier": "^1.19.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "rollup": "^1.29.1",
     "rollup-plugin-babel": "^4.3.3",
     "stylelint": "^13.2.0",
@@ -81,8 +80,8 @@
     "webpack-dev-server": "^3.10.1"
   },
   "peerDependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   },
   "lint-staged": {
     "*.{js,json,css}": [
