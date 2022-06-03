@@ -1,0 +1,101 @@
+{
+  "name": "better-react-carousel",
+  "version": "1.0.3",
+  "description": "React resposive carousel component w/ grid layout",
+  "homepage": "https://react-grid-carousel.now.sh/",
+  "keywords": [
+    "react",
+    "carousel",
+    "slider",
+    "gallery",
+    "image",
+    "grid",
+    "responsive",
+    "react-component",
+    "react-carousel",
+    "react-slider",
+    "react-image",
+    "react-grid"
+  ],
+  "repository": {
+    "url": "git@github.com:DevPanther/better-react-carousel.git",
+    "type": "git"
+  },
+  "main": "dist/bundle.js",
+  "files": [
+    "src",
+    "@types/index.d.ts"
+  ],
+  "types": "./@types/index.d.ts",
+  "scripts": {
+    "dev": "npm run build && webpack-dev-server --config examples/webpack.config.js",
+    "build": "rollup -c",
+    "prettier:check": "prettier --check './**/*.{js,json,css}' && echo \"✅ Prettier validated\"",
+    "prettier:write": "prettier --write './**/*.{js,json,css}'",
+    "stylelint": "stylelint './{src,examples,stories}/**/*.js' && echo \"✅ Stylelint validated\"",
+    "lint": "eslint './**/*.js'",
+    "lint:fix": "eslint './**/*.js' --fix",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "deploy:now": "webpack --config examples/webpack.config.js && now examples/ -n react-grid-carousel --prod"
+  },
+  "author": "DevPanther",
+  "license": "MIT",
+  "dependencies": {
+    "lodash.debounce": "^4.0.8",
+    "prop-types": "^15.7.2",
+    "smoothscroll-polyfill": "^0.4.4",
+    "styled-components": "^4.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@storybook/addon-actions": "^5.3.8",
+    "@storybook/addon-knobs": "^5.3.8",
+    "@storybook/addon-links": "^5.3.8",
+    "@storybook/addon-viewport": "^5.3.8",
+    "@storybook/addons": "^5.3.8",
+    "@storybook/react": "^5.3.8",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "husky": "^4.0.10",
+    "lint-staged": "^10.0.1",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "rollup": "^1.29.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "stylelint": "^13.2.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "lint-staged": {
+    "*.{js,json,css}": [
+      "npm run prettier:check"
+    ],
+    "*.js": [
+      "npm run stylelint",
+      "npm run lint"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
