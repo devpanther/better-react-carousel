@@ -26,17 +26,17 @@
 ## Install
 
 ```bash
-$ npm install react-grid-carousel --save
+$ npm install better-react-carousel --save
 ```
 
 ## Usage
 
-Just import the `Carousel` component from `react-grid-carousel`  
+Just import the `Carousel` component from `better-react-carousel`  
 and put your item into `Carousel.Item`
 
 ```javascript
 import React from 'react'
-import Carousel from 'react-grid-carousel'
+import Carousel from 'better-react-carousel'
 
 const Gallery = () => {
   return (
@@ -134,8 +134,9 @@ const MyDot = ({ isActive }) => (
 Storybook (Don't forget to try on different viewport size)
 
 ```bash
-$ git clone https://github.com/x3388638/react-grid-carousel
-$ cd react-grid-carousel
+$ git clone https://github.com/DevPanther/better-react-carousel
+$ cd better-react-carousel
+
 $ npm ci
 $ npm run storybook
 ```
@@ -147,8 +148,6 @@ Use case in real world
 $ npm run dev
 # open localhost:8080
 ```
-
-or visit https://react-grid-carousel.now.sh/#use-case-in-real-world
 
 ## LICENSE
 
