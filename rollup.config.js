@@ -11,7 +11,8 @@ export default [
     ],
     output: {
       file: pkg.main,
-      format: 'cjs'
+      format: 'cjs',
+      interop: 'auto'
     },
     external: [
       ...Object.keys(pkg.dependencies),
